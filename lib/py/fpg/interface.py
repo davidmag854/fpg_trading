@@ -159,7 +159,7 @@ class Interface:
         while not self.portfolio.data_manager.check_end_of_file():
             per = int(100.0*self.portfolio.data_manager.current_index / (1.0*self.portfolio.data_manager.minutes))
             if prev_per != per:
-                print(f"{per} \r", end="")
+                print(f"{per}% \r", end="")
                 prev_per = per
             self.portfolio.tick()
         print("Finished Running!")
