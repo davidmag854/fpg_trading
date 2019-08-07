@@ -12,9 +12,6 @@ from lib.py.fpg.logger import (
 from lib.py.fpg.portfolio_parent import (
     Portfolio
 )
-from lib.py.strategies.momentum_strategy.momentum_v2 import (
-    Momentum_v2
-)
 from lib.py.strategies.mean_reversion.mean_reversion import (
     MeanReversion
 )
@@ -52,9 +49,9 @@ class PortfolioManager(Portfolio):
         # Strategy dictionary - will store strategy options
         # keep on adding options
         self.strategy_dictionary = {
-            'Momentum_v2':
+            'Example':
                 {
-                    'object': Momentum_v2,
+                    'object': 'SAMPLE',
                     'last_object_created_time': None,
                     'active': True,
                     'creation_interval': timedelta(days=1),

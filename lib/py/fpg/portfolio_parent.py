@@ -138,11 +138,12 @@ class Portfolio:
         """
         for strategy_name, strategy_settings in \
                 self.strategy_dictionary.items():
-            for pair in strategy_settings['pairs']:
-                self.pairs.add(pair)
-                split_pair = pair.split("/")
-                for coin in split_pair:
-                    self.coins.add(coin)
+            if strategy_settings['active']:
+                for pair in strategy_settings['pairs']:
+                    self.pairs.add(pair)
+                    split_pair = pair.split("/")
+                    for coin in split_pair:
+                        self.coins.add(coin)
 
     def create_liquidation_dict(
             self: Any,
