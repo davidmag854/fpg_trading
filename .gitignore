@@ -1,0 +1,34 @@
+# Python stuff
+.pytest_cache
+.mypy_cache
+.python-version
+.idea/
+
+*.pyc
+fpg_venv/
+__pycache__
+
+# default directory for all service logs
+logs/
+
+# Mac files and other random files
+.DS_Store
+*sandbox/*
+*.rdb
+
+# Generated code
+lib/py/proto/
+*.swagger.json
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/logs
+.elasticbeanstalk/.localstate
+*.local
+*.env
+*.csv
+*.db
+*.swp
+
+project/
+catalyst/
+
