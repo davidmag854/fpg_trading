@@ -139,7 +139,7 @@ class MeanReversion(StrategiesAbstract):
         data_initialization_datetime_object = \
             self.last_exchange_open_time - \
             datetime.timedelta(days=self.days_back)
-        # Fetch high lowse
+        # Fetch high low
         self.calculate_bands(
             get_timestamp(
                 data_initialization_datetime_object)
@@ -227,17 +227,18 @@ class MeanReversion(StrategiesAbstract):
         - Check if object expiration period has reached,
           if so, will return:
           * If the object has an open position, it will
-            return a dictionary with details for liquidation
+            return a list containing dictionary/ies
+            with details for liquidation
           * If the object doesnt have an open position, it
-            will return str -> 'remove' which will remove
-            the object from the active strategy objects
-            from the portfolio to the expired ones
+            will set the object to expired and the portfolio
+            will remove this object from the active objects
+            list and update the db entry of the object
         - If object is still live and running:
           * Will modify the boundaries
           * Will check for execution indicators
-            If execution is needed it will return -> dict
+            If execution is needed it will return -> list of dict
             with the necessary values. If nothing is need to
-            be done, it will return -> None
+            be done, it will return -> []
         """
         # Fetching current price
         self.last_price_fetch_time = self.data_manager.fetch_current_time()

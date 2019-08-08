@@ -52,4 +52,3 @@ class EmptyStrategy(StrategiesAbstract):
 
     def refresh(self):
         pass
-        
