@@ -155,7 +155,6 @@ class LiveDataManager(DataHandlerSuper):
         """
         logger.info("fetching balance for account")
         balance = self.fpg_connector.fetch_balance(coins)
-        del balance['succeeded']
         return balance
 
     def fetch_orderbook(
