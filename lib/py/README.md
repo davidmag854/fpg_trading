@@ -10,9 +10,7 @@ Mostly this folder can be ignored.
 
 ## strategies
 
-In each folder there are three files:
+In each folder there is one file:
 - `<strategy>.py` - Defines the strategy, and logic of buying/selling.
-- `portfolio.py` - Defines the logic of what strategies to activate and focus on.
-- `risk_manager.py` - Defines how much to buy/sell.
 
 To create/run a new strategy, make a new folder here and update the files appropriately.
