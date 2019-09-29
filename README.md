@@ -1,6 +1,8 @@
 # FPG Trading Demos and Systems
 
 This contains a public repository to interact with and trade using the FPG system.
+This software allows quantatative traders to trade in the crypto market using FPG's Smart Order Routing algos.
+You only need to implement your strategies, the system allows backtesting, data delivery, and portfolio managment. 
 
 To use this, follow the setup below to run the example strategy, then develop your own strategy within the `lib/py/strategies/<your strategy name>` folder and test it out.
 
